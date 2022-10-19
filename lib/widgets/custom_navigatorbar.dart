@@ -11,9 +11,10 @@ class CustomNavigationBar extends StatelessWidget {
     final currentIndex = uiProvider.selectedMenuOpt;
     return BottomNavigationBar(
         //onTap: (int i) => print('opt: $i'),
-        onTap: (int i) => uiProvider.selectedMenuOpt,
+        onTap: (int i) => uiProvider.selectedMenuOpt = i,
         currentIndex: currentIndex,
         elevation: 0,
+        // ignore: prefer_const_literals_to_create_immutables
         items: <BottomNavigationBarItem>[
           const BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Mapa'),
           const BottomNavigationBarItem(
