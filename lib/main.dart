@@ -14,7 +14,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'QR Reader',
       initialRoute: 'home',
-      routes: {'home': (_) => HomePage(), 'mapa': (_) => MapaPage()},
+      routes: {
+        'home': (_) => const HomePage(),
+        'mapa': (_) => const MapaPage()
+      },
+      theme: ThemeData(
+          primaryColor: Colors.deepPurple,
+          floatingActionButtonTheme: const FloatingActionButtonThemeData(
+              backgroundColor: Colors.deepPurple)),
     );
   }
 }
